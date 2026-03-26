@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useMemo } from "react";
+import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import Map from "react-map-gl/maplibre";
 import DeckGL from "@deck.gl/react";
 import { GeoJsonLayer } from "@deck.gl/layers";
@@ -13,6 +13,27 @@ interface MapViewProps {
   layers: LayerConfig[];
 }
 
+// Suppress ResizeObserver error globally
+if (typeof window !== "undefined") {
+  const OriginalResizeObserver = window.ResizeObserver;
+  window.ResizeObserver = class ResizeObserver extends OriginalResizeObserver {
+    constructor(callback: ResizeObserverCallback) {
+      super((entries) => {
+        try {
+          callback(entries);
+        } catch (e: any) {
+          // Silently catch luma.gl ResizeObserver errors
+          if (e?.message?.includes("maxTextureDimension2D")) {
+            console.debug("Suppressed WebGL ResizeObserver error");
+            return;
+          }
+          throw e;
+        }
+      });
+    }
+  };
+}
+
 export function MapView({ layers }: MapViewProps) {
   const [viewState, setViewState] = useState<MapViewState>(DEFAULT_VIEW_STATE);
   const [mapStyle, setMapStyle] = useState<"dark" | "osm">("dark");
@@ -22,6 +43,12 @@ export function MapView({ layers }: MapViewProps) {
     content: Record<string, unknown>;
     name: string;
   } | null>(null);
+  const [isReady, setIsReady] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    setIsReady(true);
+  }, []);
 
   // Build Deck.gl layers from LayerConfig
   const deckLayers = useMemo(() => {
@@ -82,8 +109,25 @@ export function MapView({ layers }: MapViewProps) {
 
   const currentStyle = mapStyle === "dark" ? DARK_MAP_STYLE : OSM_TILE_STYLE;
 
+  if (!isReady) {
+    return (
+      <div className="relative flex-1 h-screen bg-obsidian-950 overflow-hidden flex items-center justify-center">
+        <div className="text-center">
+          <div className="relative w-8 h-8 mx-auto mb-4">
+            <div className="absolute inset-0 rounded-full border-2 border-accent-cyan/20 animate-spin" />
+          </div>
+          <p className="text-sm font-body text-white/70">Initializing...</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className="relative flex-1 h-screen bg-obsidian-950 overflow-hidden">
+    <div 
+      className="relative flex-1 h-screen bg-obsidian-950 overflow-hidden"
+      ref={containerRef}
+      style={{ width: "100%", height: "100%" }}
+    >
       {/* DeckGL + MapLibre */}
       <DeckGL
         viewState={viewState}
@@ -93,7 +137,20 @@ export function MapView({ layers }: MapViewProps) {
         }}
         controller={true}
         layers={deckLayers}
-        style={{ width: "100%", height: "100%" }}
+        style={{ 
+          width: "100%", 
+          height: "100%", 
+          backgroundColor: "#0f0f1e"
+        }}
+        glOptions={{
+          preserveDrawingBuffer: true,
+          antialias: true,
+          powerPreference: "high-performance",
+          stencil: true,
+          alpha: true,
+          depth: true,
+          failIfMajorPerformanceCaveat: false,
+        }}
       >
         <Map
           reuseMaps

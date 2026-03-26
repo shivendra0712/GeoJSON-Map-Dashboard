@@ -11,7 +11,12 @@ export function useGeoJSONFiles() {
   useEffect(() => {
     async function fetchFiles() {
       try {
-        const res = await fetch("/api/geojson-files");
+        const res = await fetch("/api/geojson-files", {
+          cache: "no-store",
+          headers: {
+            "Cache-Control": "no-cache",
+          },
+        });
         if (!res.ok) throw new Error("Failed to fetch file list");
         const data = await res.json();
         setFiles(data.files || []);
