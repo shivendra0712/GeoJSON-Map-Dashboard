@@ -1,0 +1,69 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[68.1, 23.0], [74.0, 24.7], [75.0, 22.0], [72.8, 20.1], [68.5, 20.6], [68.1, 23.0]]]
+      },
+      "properties": { "name": "Gujarat", "capital": "Gandhinagar", "area_km2": 196024 }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[74.0, 24.7], [78.3, 26.9], [80.1, 24.6], [78.5, 23.0], [75.0, 22.0], [74.0, 24.7]]]
+      },
+      "properties": { "name": "Madhya Pradesh", "capital": "Bhopal", "area_km2": 308252 }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[78.3, 26.9], [84.6, 27.5], [88.0, 26.4], [85.0, 23.5], [80.1, 24.6], [78.3, 26.9]]]
+      },
+      "properties": { "name": "Uttar Pradesh", "capital": "Lucknow", "area_km2": 240928 }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[75.0, 22.0], [80.1, 24.6], [81.6, 22.0], [80.0, 19.5], [77.0, 19.0], [75.0, 22.0]]]
+      },
+      "properties": { "name": "Maharashtra", "capital": "Mumbai", "area_km2": 307713 }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[76.0, 15.5], [80.0, 19.5], [81.6, 18.0], [80.0, 14.0], [77.0, 13.5], [76.0, 15.5]]]
+      },
+      "properties": { "name": "Telangana", "capital": "Hyderabad", "area_km2": 112077 }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[77.0, 13.5], [80.0, 14.0], [80.2, 11.5], [76.5, 10.0], [76.0, 11.5], [77.0, 13.5]]]
+      },
+      "properties": { "name": "Karnataka", "capital": "Bengaluru", "area_km2": 191791 }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[85.0, 23.5], [88.0, 26.4], [87.0, 21.5], [86.0, 20.0], [83.0, 21.5], [85.0, 23.5]]]
+      },
+      "properties": { "name": "Odisha", "capital": "Bhubaneswar", "area_km2": 155707 }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[80.1, 24.6], [85.0, 23.5], [83.0, 21.5], [81.6, 22.0], [80.1, 24.6]]]
+      },
+      "properties": { "name": "Chhattisgarh", "capital": "Raipur", "area_km2": 135192 }
+    }
+  ]
+}

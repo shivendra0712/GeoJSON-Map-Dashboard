@@ -1,0 +1,80 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [77.2090, 28.6139] },
+      "properties": { "name": "New Delhi", "population": 32941000, "country": "India" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [72.8777, 19.0760] },
+      "properties": { "name": "Mumbai", "population": 20667656, "country": "India" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [88.3639, 22.5726] },
+      "properties": { "name": "Kolkata", "population": 14850000, "country": "India" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [80.2707, 13.0827] },
+      "properties": { "name": "Chennai", "population": 10971108, "country": "India" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [77.5946, 12.9716] },
+      "properties": { "name": "Bangalore", "population": 12476000, "country": "India" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [75.8577, 22.7196] },
+      "properties": { "name": "Indore", "population": 3276697, "country": "India" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [73.8567, 18.5204] },
+      "properties": { "name": "Pune", "population": 6629000, "country": "India" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.0060, 40.7128] },
+      "properties": { "name": "New York", "population": 18804000, "country": "USA" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-0.1276, 51.5074] },
+      "properties": { "name": "London", "population": 9648000, "country": "UK" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [2.3522, 48.8566] },
+      "properties": { "name": "Paris", "population": 11060000, "country": "France" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [139.6917, 35.6895] },
+      "properties": { "name": "Tokyo", "population": 37435191, "country": "Japan" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [116.4074, 39.9042] },
+      "properties": { "name": "Beijing", "population": 21707000, "country": "China" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-43.1729, -22.9068] },
+      "properties": { "name": "Rio de Janeiro", "population": 13458000, "country": "Brazil" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [37.6173, 55.7558] },
+      "properties": { "name": "Moscow", "population": 12506000, "country": "Russia" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [151.2093, -33.8688] },
+      "properties": { "name": "Sydney", "population": 5312000, "country": "Australia" }
+    }
+  ]
+}

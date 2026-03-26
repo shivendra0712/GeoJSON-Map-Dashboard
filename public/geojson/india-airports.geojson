@@ -1,0 +1,62 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [77.1025, 28.5562] },
+      "properties": { "name": "Indira Gandhi International Airport", "iata": "DEL", "type": "International", "runways": 3 }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[77.08, 28.54], [77.13, 28.54], [77.13, 28.58], [77.08, 28.58], [77.08, 28.54]]]
+      },
+      "properties": { "name": "DEL Terminal Zone", "type": "Restricted Airspace" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [72.8679, 19.0896] },
+      "properties": { "name": "Chhatrapati Shivaji International Airport", "iata": "BOM", "type": "International", "runways": 2 }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[72.85, 19.08], [72.89, 19.08], [72.89, 19.10], [72.85, 19.10], [72.85, 19.08]]]
+      },
+      "properties": { "name": "BOM Terminal Zone", "type": "Restricted Airspace" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [77.7068, 12.9499] },
+      "properties": { "name": "Kempegowda International Airport", "iata": "BLR", "type": "International", "runways": 2 }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[72.8679, 19.0896], [77.1025, 28.5562], [77.7068, 12.9499]]
+      },
+      "properties": { "name": "Air Corridor BOM-DEL-BLR", "type": "Air Route" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [80.1700, 12.9941] },
+      "properties": { "name": "Chennai International Airport", "iata": "MAA", "type": "International", "runways": 2 }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [88.4468, 22.6547] },
+      "properties": { "name": "Netaji Subhas Chandra Bose International", "iata": "CCU", "type": "International", "runways": 2 }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[80.1700, 12.9941], [77.7068, 12.9499], [72.8679, 19.0896]]
+      },
+      "properties": { "name": "Southern Air Corridor", "type": "Air Route" }
+    }
+  ]
+}
